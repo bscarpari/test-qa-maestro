@@ -1,0 +1,12 @@
+flows:
+  - "auth/*"
+  - "routes/*"
+executionOrder:
+  flowsOrder:
+    - "auth/LoginWithFixedUser.yaml"
+    - "routes/IniatilizeAutomaticRoute.yaml"
+includeTags:
+  - auth
+  - routes
+excludeTags:
+  - optional

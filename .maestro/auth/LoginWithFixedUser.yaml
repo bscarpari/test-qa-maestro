@@ -1,0 +1,21 @@
+appId: com.argonav
+tags:
+  - auth
+---
+- launchApp 
+- runFlow:
+    when:
+      visible: "Show All Sign In Options"
+    commands:
+      - tapOn: "Show All Sign In Options"
+- tapOn: "Sign in with Email"
+- tapOn: "Email"
+- inputText: "argo_premium@oidoug.com"
+- tapOn: "Password"
+- inputText: "Argo12345"
+- tapOn: "Sign In"
+- runFlow:
+    when:
+      visible: "While using the app"
+    commands:
+      - tapOn: "SKIP"

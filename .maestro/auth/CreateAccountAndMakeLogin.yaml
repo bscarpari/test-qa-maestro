@@ -1,0 +1,38 @@
+appId: com.argonav
+tags:
+  - optional
+---
+- launchApp 
+- runFlow:
+    when:
+      visible: "Show All Sign In Options"
+    commands:
+      - tapOn: "Show All Sign In Options"
+- tapOn: "Sign in with Email"
+- tapOn: "Create an Account"
+- tapOn: "First Name"
+- inputText: "Bruno"
+- tapOn: "Last Name"
+- inputText: "Test"
+- tapOn: "Email"
+- inputText: "bscarpari.dev@gmail.com"
+- tapOn: "Password"
+- inputText: "4s5V=?3Yw~=#"
+- tapOn: "Re-enter Password"
+- inputText: "4s5V=?3Yw~=#"
+- tapOn:
+    id: "android:id/input_method_nav_back"
+- tapOn:
+    point: "50%,72%"
+- tapOn: "SEND"
+- tapOn: "Sign In"
+- tapOn: "Email"
+- inputText: "argo_premium@oidoug.com"
+- tapOn: "Password"
+- inputText: "Argo12345"
+- tapOn: "Sign In"
+- runFlow:
+    when:
+      visible: "While using the app"
+    commands:
+      - tapOn: "SKIP"

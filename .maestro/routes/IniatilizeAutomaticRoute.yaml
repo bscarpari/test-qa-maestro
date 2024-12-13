@@ -1,0 +1,16 @@
+appId: com.argonav
+tags:
+  - routes
+---
+- runFlow: "../auth/LoginWithFixedUser.yaml"
+- tapOn: "Navigate"
+- tapOn: "Autoroute"
+- runFlow:
+    when:
+      visible: "No Autoroute Available"
+    commands:
+      - tapOn: "DISMISS"
+      - tapOn:
+          point: "5%,8%"
+      - tapOn: "Navigate"
+    
